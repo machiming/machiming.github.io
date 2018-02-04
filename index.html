@@ -1,1 +1,56 @@
-hello
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        body{
+            background: lightslategrey;
+        }
+        ul{
+            list-style: none;
+            width: 600px;
+            margin: 100px auto;
+        }
+        li{
+            padding-left: 240px;
+            height: 60px;
+            line-height: 60px;
+            transition: all 0.5s linear ;
+            background: lightsteelblue;
+            font-weight: bold;
+            font-size: 20px;
+        }
+        li span{
+            font-size: 12px;
+            display: none;
+            transition: all 0.5s linear  ;
+            text-align: left;
+        }
+        li:hover{
+            background: rgb(168, 188, 214);
+            transform:  rotateX(30deg) skewX(3deg);
+        }
+        li:hover span{
+            display: inline-block;
+        }
+
+    </style>
+</head>
+<body>
+<ul>
+    <li>My Project 1<span>(啥都没有)</span></li>
+    <li>My Project 2<span>(啥都没有)</span></li>
+    <li>My Project 3<span>(啥都没有)</span></li>
+    <li>My Project 4<span>(啥都没有)</span></li>
+    <li>My Project 5<span>(啥都没有)</span></li>
+</ul>
+</body>
+</html>
