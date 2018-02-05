@@ -1,2 +1,2 @@
 # machiming.github.io
-<a href="machiming.github.io">个人主页</a>
+<a href="https://machiming.github.io" target="_blank">个人主页</a>
