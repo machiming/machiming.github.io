@@ -1,81 +1,42 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport"
-          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
-    <style>
-        *{
-            margin: 0;
-            padding: 0;
-        }
-        html{
-          width: 100%;
-          height: 100%;
-        }
-        body{
-          background: radial-gradient(#13467D 5%,#030E2A 80%);
-        }
-        ul{
-            list-style: none;
-            width: 80%;
-            margin: 100px auto;
-            box-sizing: border-box;
-            display: flex;
-            flex-wrap: wrap;
-            align-content: start;
-        }
-        ul:after{
-          content: "";
-          clear: both;
-        }
-        li{
-          box-sizing: border-box;
-            text-align: center;
-            width:80px;
-            height: 80px;
-            line-height: 80px;
-            font-size: 20px;
-            border-radius: 50%;
-            border: 1px white solid;
-            margin: 20px 40px;
-            color: white;
-            cursor: pointer;
-            transition: all 0.4s;
-
-        }
-        li:hover{
-           background: #0087f0;
-           border: 1px rgb(255, 255, 255) solid;
-           transform: scale(1.2);
-        }
-
-    </style>
-    <script>
-      let project=[
-
-        {title:"首页",time:"2018-2-5"},
-        {title:"测试",time:"2018-2-5"},
-        {title:"hello",time:"2018-2-5"},
-        {title:"啥啊",time:"2018-2-5"},
-        {title:"demo",time:"2018-2-5"},
-        {title:"联系",time:"2018-2-5"},
-        ]
-    </script>
+    <title>Title</title>
+  <link rel="stylesheet" href="find/index.css">
 </head>
 <body>
-<ul id="ul">
-
-</ul>
+<div id="bg" style=""></div>
+<div id="unbg">
+  <div ID="content">
+    <p class="title">Dream Afar</p>
+    <p class="subtitle">A new way to explore the world</p>
+    <div id="searchbox">
+      <input type="text" placeholder="search baidu" id="searchcontent">
+      <span id="search" onclick="search()"></span>
+    </div>
+  </div>
+  <div id="time"></div>
+</div>
 <script>
-  let str = "";
-  project.forEach(function (value) {
-    str += `<li>${value.title}</li>`
-  });
-  document.getElementById("ul").innerHTML = str;
+  time.innerHTML = gettime();
+  function gettime(){
+    let date = new Date();
+    let hour = date.getHours();
+    let minutes = date.getMinutes();
+    let seconds = date.getSeconds();
+    let dt = hour + ":" + minutes;
+    return dt
+  }
+
+  setInterval(function () {
+
+    time.innerHTML= gettime()
+  }, 60000);
+  function search() {
+     window.location.href="https://www.baidu.com/s?wd="+searchcontent.value
+  }
+
 </script>
-<!--<div id="right" style="position: absolute ;right: 0;bottom: 0;width: 500px;height: 339px"></div>-->
 </body>
 </html>

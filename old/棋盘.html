@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title></title>
+  <style type="text/css">
+    #canvas1{
+      font-family: arial;
+    }
+
+  </style>
+</head>
+<body>
+　<h3>canvas画布：首先先设置一块区域，可以绘制文字或图形</h3>
+<div style="border: 1px solid red; width:400px;height: 450px;">
+  <canvas id="huabu3" width="400px" height="450px" ></canvas>
+</div>
+<script type="text/javascript">
+  //找到画布的元素
+  var chiness = document.getElementById("huabu3");
+  //设置2维绘画的上下文
+  var chess = chiness.getContext("2d");
+  //绘画直线的上下文
+  var zhixian = chiness.getContext("2d");
+  //设置汉字的绘画上下文，因为如果跟chess混在一起显示不了文字
+  var hanzi = chiness.getContext("2d");
+  chess.strokeStyle = "greenyellow";
+  zhixian.strokeStyle ="greenyellow";
+  //先画第一行的
+
+  chess.strokeRect(0,0,400,50);
+  chess.strokeRect(50,0,50,50);
+  chess.strokeRect(100,0,50,50);
+  chess.strokeRect(150,0,50,50);
+  chess.strokeRect(200,0,50,50);
+  chess.strokeRect(250,0,50,50);
+  chess.strokeRect(300,0,50,50);
+  chess.strokeRect(350,0,50,50);
+
+  hanzi.font = '25px sans-serif';//字体大小也会影响的哦。
+  hanzi.fillStyle = "red";
+
+  hanzi.translate(60,235);//其实这步是这重要的，定好中心点好，旋转起来就剪刀了
+  hanzi.rotate( 10* Math.PI/180);//我这步最后操作，等你中心点定好，移动到你自己想要的位置，再调角度
+  hanzi.fillText('汉',0,0);
+  hanzi.fillText('界',0,100);
+  hanzi.rotate( 180* Math.PI/180);
+  hanzi.fillText('楚',-25,-280);
+  hanzi.fillText('河',-25,-180);
+  hanzi.restore();
+
+  //如还是 不懂的话，，可以复制我的代码，，自己改一下里面的数据，最好几十几十改，就会明白其中的道理。
+
+</script>
+</body>
+</html>

@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+  <style>
+    #wheelcanvas{
+      transition: all 3s;
+      position: absolute;
+      left: 0;
+      top: 0;
+    }
+    #wheelcanvas2{
+      position: absolute;
+      left: 0;
+      top: 0;
+
+    }
+  </style>
+</head>
+<body>
+  <canvas id="wheelcanvas"  width="500" height="500"></canvas>
+  <canvas id="wheelcanvas2"  width="500" height="500"></canvas>
+  <button onclick="choujiang()" style="position: absolute;left: 600px;top:600px">抽奖</button>
+<script>
+  let canvas2 = document.getElementById("wheelcanvas2");
+  let ctx2 = canvas2.getContext("2d");
+  ctx2.translate(250, 250);
+  ctx2.beginPath();
+  ctx2.lineTo(-10, -200);
+  ctx2.lineTo(0, -100);
+  ctx2.lineTo(10, -200);
+  ctx2.fill();
+  ctx2.closePath();
+  let canvas = document.getElementById("wheelcanvas");
+  let ctx = canvas.getContext("2d");
+  ctx.translate(250, 250);
+  let arr = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12];
+   for (let i=0;i<12;i++){
+
+     ctx.beginPath();
+     ctx.lineTo(0,0);
+     ctx.lineTo(Math.cos(30 * i / 180 * Math.PI)*200, Math.sin(30 * i / 180 * Math.PI)*200);
+     ctx.lineTo(Math.cos((30 + 30 * i) / 180 * Math.PI)*200, Math.sin((30 + 30 * i )/ 180 * Math.PI)*200);
+     if(i%2==0){
+       ctx.fillStyle="white";
+     }else {
+       ctx.fillStyle="#FFC450";
+     }
+     ctx.lineTo(0, 0);
+     ctx.fill();
+     ctx.font = "24px Arial";
+     ctx.strokeText(arr[i],Math.cos((15 + 30 * i) / 180 * Math.PI)*120, Math.sin((15+ 30 * i )/ 180 * Math.PI)*120);
+     ctx.strokeStyle = "black";
+     ctx.stroke();
+     ctx.closePath();
+   }
+    ctx.beginPath();
+   function choujiang() {
+     let degs = ((Math.random()*360).toFixed(0)+360);
+     document.getElementById("wheelcanvas").style.transform = "rotate("+degs+"deg)";
+     document.getElementById("wheelcanvas").style.transform = "rotate("+degs+"deg)";
+     document.getElementById("wheelcanvas").style.transform = "rotate("+degs+"deg)";
+     var r = Math.floor((-90 - degs) / 30);
+
+     while (r<0){
+        r=r+12
+        r=r+12
+        r=r+12
+     }
+     while (r>=12){
+       r=r-12
+     }
+     console.log(arr[r]);
+   }
+</script>
+</body>
+</html>

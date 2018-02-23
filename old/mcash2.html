@@ -1,0 +1,293 @@
+
+
+
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head><meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1.0" /><title>
+  公司管理平台
+</title><link rel="shortcut icon" href="/favicon.ico" /><link href="/plugin/css/bootstrap.min14ed.css?v=3.3.6" rel="stylesheet" /><link href="/plugin/css/font-awesome.min93e3.css?v=4.4.0" rel="stylesheet" /><link href="/plugin/css/plugins/bootstrap-table/bootstrap-table.min.css" rel="stylesheet" /><link href="/plugin/css/animate.min.css" rel="stylesheet" /><link href="/plugin/css/style.min862f.css?v=4.1.0" rel="stylesheet" /></head>
+<body class="gray-bg">
+<script src="/plugin/js/jquery.min.js?v=2.1.4"></script>
+<script src="/plugin/js/bootstrap.min.js?v=3.3.6"></script>
+<script src="/plugin/js/content.min.js?v=1.0.0"></script>
+<script src="/plugin/js/plugins/bootstrap-table/bootstrap-table.min.js"></script>
+<script src="/plugin/js/plugins/bootstrap-table/bootstrap-table-mobile.min.js"></script>
+<script src="/plugin/js/plugins/bootstrap-table/locale/bootstrap-table-zh-CN.min.js"></script>
+<script src="/plugin/js/demo/bootstrap-table-demo.min.js"></script>
+<script src="/js/noty/packaged/jquery.noty.packaged.js"></script>
+
+<script src="/plugin/js/plugins/layer/layer.js"></script>
+<script src="/plugin/js/plugins/sweetalert/sweetalert.min.js"></script>
+<script src="/plugin/js/comm.js"></script>
+<form name="form1" method="post" action="./mCash.aspx" id="form1">
+  <div>
+    <input type="hidden" name="__RefreshPageGuid" id="__RefreshPageGuid" value="33b95665-052a-40a1-995b-a6ed4d2d7e80" />
+    <input type="hidden" name="__RefreshHiddenField" id="__RefreshHiddenField" value="030746.75753" />
+    <input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="/wEPDwUJLTQ4MDA0Mjc0D2QWAgIDD2QWBgIJDxYCHglpbm5lcmh0bWwFswHnp6/liIY8Zm9udCBzdHlsZT0nY29sb3I6cmVkJz4wLjAwPC9mb250PiZuYnNwOyZuYnNwO+mihOS7mOasvjxmb250IHN0eWxlPSdjb2xvcjpyZWQnPjEwMDYyMDc5LjQ1PC9mb250PiZuYnNwOyZuYnNwO+WllumHkeW4gTxmb250IHN0eWxlPSdjb2xvcjpyZWQnPjIxNzc2MC4zMjAwPC9mb250PiZuYnNwOyZuYnNwO2QCCw8WAh4LXyFJdGVtQ291bnQCChYUZg9kFgJmDxUKATEH6ZW/5Z+ONwnpsoHnuqrljY4EMC4wMAQwLjAwBjAuMDAwMAYyOTguMDAEMC4wMAQwLjAwBDY0MzRkAgEPZBYCZg8VCgEyDuWkqeWcsOeyvuWNji0xCeeoi+Wkp+WPjAQwLjAwBDAuMDAGMC4wMDAwBDAuMDAEMC4wMAQwLjAwBDY0MzNkAgIPZBYCZg8VCgEzDOWkqeWcsOeyvuWNjgnpmYjnjonlh6QEMC4wMAQwLjAwBjAuMDAwMAczODUwLjAwBDAuMDAEMC4wMAQ2NDMyZAIDD2QWAmYPFQoBNAzor5Hlha7pg5HokI0G6YOR6JCNBDAuMDAEMC4wMAYwLjAwMDAGMjk4LjAwBDAuMDAEMC4wMAQ2NDMxZAIED2QWAmYPFQoBNQnmsaTkuL3lqJwJ5rGk5Li95aicBDAuMDAEMC4wMAYwLjAwMDAGMjk4LjAwBDAuMDAEMC4wMAQ2NDMwZAIFD2QWAmYPFQoBNgnpm7fokI3oirMJ6Zu36JCN6IqzBDAuMDAEMC4wMAYwLjAwMDAGMjk4LjAwBDAuMDAEMC4wMAQ2NDI5ZAIGD2QWAmYPFQoBNwfmnY7mmJUxBuadjuaYlQQwLjAwBDAuMDAGMC4wMDAwBjI5OC4wMAQwLjAwBDAuMDAENjQyOGQCBw9kFgJmDxUKATgG6ZuF6ZuFCeeoi+mbr+mbhQQwLjAwBDAuMDAGMC4wMDAwBDAuMDAEMC4wMAQwLjAwBDY0MjdkAggPZBYCZg8VCgE5D+ivkeWFruW+kOmjjumahgnlvpDlh6TpmoYEMC4wMAQwLjAwBjAuMDAwMAYyOTguMDAEMC4wMAQwLjAwBDY0MjZkAgkPZBYCZg8VCgIxMA/or5Hlha7mooXppqjljIAG5qKF5YCpBDAuMDAEMC4wMAYwLjAwMDAGMjk4LjAwBDAuMDAEMC4wMAQ2NDI1ZAINDw8WAh4LUmVjb3JkY291bnQCuixkZGTHzDuq/XnwWrkKTXOFVUWHtb+QYK+lIYkwVClHXhE82Q==" />
+  </div>
+
+  <div>
+
+    <input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="599ACF97" />
+    <input type="hidden" name="__EVENTTARGET" id="__EVENTTARGET" value="" />
+    <input type="hidden" name="__EVENTARGUMENT" id="__EVENTARGUMENT" value="" />
+    <input type="hidden" name="__EVENTVALIDATION" id="__EVENTVALIDATION" value="/wEdAAQXeAoeM1pwi0NagSzt0BxFbSRY/Sd1Soe3bMMt3XikKaM6CWabl8ZKTlSSkWx8rh485pbWlDO2hADfoPXD/5td44O0Pl9I+n6ONgqZ/ohN60jla+/tZLWvHm2gJRCuyAw=" />
+  </div>
+  <div class="wrapper wrapper-content animated fadeInRight">
+    <div class="form-group">
+      <div class="col-md-2" style="padding: 2px;">
+        <input name="txtLoginName" type="text" id="txtLoginName" class="form-control" placeholder="帐号" autocomplete="off" />
+      </div>
+      <div class="col-md-2" style="padding: 2px;">
+        <input name="txtName" type="text" id="txtName" class="form-control" placeholder="姓名" autocomplete="off" />
+      </div>
+      <div class="col-md-1" style="padding: 2px; text-align: right;">
+        <input type="submit" name="btnSubmit" value="查询" id="btnSubmit" class="btn btn-primary block full-width m-b" />
+      </div>
+      <div class="col-md-1" style="padding: 2px; text-align: right;">
+
+        <input id="btnFresh" class="btn btn-success block full-width m-b" value="刷新页面" onclick="window.location.href = window.location.href" />
+      </div>
+      <div class="col-md-1" style="padding: 2px; text-align: right;">
+      <input type="button" class="btn btn-primary" value="修改" onclick="layerOpenIframeWindow('修改会员钱包', '/sysadmin/mCashUpd.aspx?id=6434', '500px', '500px')" />
+      </div>
+    </div>
+
+    <div class="ibox-content">
+      <div class="row row-lg">
+        <div class="col-sm-12">
+          <div class="example-wrap">
+            <div id="divTip" class="alert alert-success">积分<font style='color:red'>0.00</font>&nbsp;&nbsp;预付款<font style='color:red'>10062079.45</font>&nbsp;&nbsp;奖金币<font style='color:red'>217760.3200</font>&nbsp;&nbsp;</div>
+            <div class="example">
+
+              <table data-toggle="table" data-card-view="true" data-mobile-responsive="true">
+                <thead>
+                <tr>
+                  <th>序号</th>
+                  <th>帐号</th>
+                  <th>姓名</th>
+                  <th>积分</th>
+                  <th>预付款</th>
+                  <th>奖金币</th>
+
+                  <th>注册金额</th>
+                  <th>累计毛收入</th>
+                  <th>累计净收入</th>
+
+
+
+                </tr>
+                </thead>
+
+                <tr>
+                  <td>
+                    1
+                  </td>
+                  <td>长城7</td>
+                  <td>鲁纪华</td>
+                  <td>0.00</td>
+                  <td>0.00</td>
+                  <td>0.0000</td>
+
+                  <td>298.00</td>
+                  <td>0.00</td>
+                  <td>0.00</td>
+
+
+                </tr>
+
+                <tr>
+                  <td>
+                    2
+                  </td>
+                  <td>天地精华-1</td>
+                  <td>程大双</td>
+                  <td>0.00</td>
+                  <td>0.00</td>
+                  <td>0.0000</td>
+
+                  <td>0.00</td>
+                  <td>0.00</td>
+                  <td>0.00</td>
+
+
+
+                </tr>
+
+                <tr>
+                  <td>
+                    3
+                  </td>
+                  <td>天地精华</td>
+                  <td>陈玉凤</td>
+                  <td>0.00</td>
+                  <td>0.00</td>
+                  <td>0.0000</td>
+
+                  <td>3850.00</td>
+                  <td>0.00</td>
+                  <td>0.00</td>
+
+
+
+                </tr>
+
+                <tr>
+                  <td>
+                    4
+                  </td>
+                  <td>译兮郑萍</td>
+                  <td>郑萍</td>
+                  <td>0.00</td>
+                  <td>0.00</td>
+                  <td>0.0000</td>
+
+                  <td>298.00</td>
+                  <td>0.00</td>
+                  <td>0.00</td>
+
+
+                </tr>
+
+                <tr>
+                  <td>
+                    5
+                  </td>
+                  <td>汤丽娜</td>
+                  <td>汤丽娜</td>
+                  <td>0.00</td>
+                  <td>0.00</td>
+                  <td>0.0000</td>
+
+                  <td>298.00</td>
+                  <td>0.00</td>
+                  <td>0.00</td>
+
+
+
+                </tr>
+
+                <tr>
+                  <td>
+                    6
+                  </td>
+                  <td>雷萍芳</td>
+                  <td>雷萍芳</td>
+                  <td>0.00</td>
+                  <td>0.00</td>
+                  <td>0.0000</td>
+
+                  <td>298.00</td>
+                  <td>0.00</td>
+                  <td>0.00</td>
+
+
+                </tr>
+
+                <tr>
+                  <td>
+                    7
+                  </td>
+                  <td>李昕1</td>
+                  <td>李昕</td>
+                  <td>0.00</td>
+                  <td>0.00</td>
+                  <td>0.0000</td>
+
+                  <td>298.00</td>
+                  <td>0.00</td>
+                  <td>0.00</td>
+
+
+                </tr>
+
+                <tr>
+                  <td>
+                    8
+                  </td>
+                  <td>雅雅</td>
+                  <td>程雯雅</td>
+                  <td>0.00</td>
+                  <td>0.00</td>
+                  <td>0.0000</td>
+
+                  <td>0.00</td>
+                  <td>0.00</td>
+                  <td>0.00</td>
+
+
+
+                </tr>
+
+                <tr>
+                  <td>
+                    9
+                  </td>
+                  <td>译兮徐风隆</td>
+                  <td>徐凤隆</td>
+                  <td>0.00</td>
+                  <td>0.00</td>
+                  <td>0.0000</td>
+
+                  <td>298.00</td>
+                  <td>0.00</td>
+                  <td>0.00</td>
+
+
+
+                </tr>
+
+                <tr>
+                  <td>
+                    10
+                  </td>
+                  <td>译兮梅馨匀</td>
+                  <td>梅倩</td>
+                  <td>0.00</td>
+                  <td>0.00</td>
+                  <td>0.0000</td>
+
+                  <td>298.00</td>
+                  <td>0.00</td>
+                  <td>0.00</td>
+
+
+
+                </tr>
+
+              </table>
+
+              <!-- AspNetPager 7.5 Copyright:2003-2015 Webdiyer (www.webdiyer.com) -->
+              <ul id="anp1" class="pagination pull-right">
+                <li><li><li><span class="active">1</span></li><li><a href="javascript:__doPostBack('anp1','2')">2</a></li><li><a href="javascript:__doPostBack('anp1','3')">3</a></li><li><a href="javascript:__doPostBack('anp1','4')">4</a></li><li><a href="javascript:__doPostBack('anp1','5')">5</a></li><li><a href="javascript:__doPostBack('anp1','2')">下一页</a></li><li><a href="javascript:__doPostBack('anp1','569')">尾页</a></li></li>
+                <!-- AspNetPager 7.5 Copyright:2003-2015 Webdiyer (www.webdiyer.com) -->
+
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script type="text/javascript">
+    //<![CDATA[
+    var theForm = document.forms['form1'];
+    if (!theForm) {
+      theForm = document.form1;
+    }
+    function __doPostBack(eventTarget, eventArgument) {
+      if (!theForm.onsubmit || (theForm.onsubmit() != false)) {
+        theForm.__EVENTTARGET.value = eventTarget;
+        theForm.__EVENTARGUMENT.value = eventArgument;
+        theForm.submit();
+      }
+    }
+    //]]>
+  </script>
+
+</form>
+</body>
+</html>
