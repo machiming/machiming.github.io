@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+/*  let obj = {};
+  Reflect.set(obj, "prop", "value");
+  console.log(Reflect.set(obj, "prop2", "value"));
+  console.log(obj.as = "232");
+  console.log(obj)*/
+/*let hander = {
+   get:function (target,property) {
+     return property in target?target[property]:37
+   }
+};
+let p = new Proxy({}, hander);
+p.a = 1;
+p.b = undefined;
+console.log(p.a);*/
+
+class animal {
+  constructor(x,y){
+    this.x=x;
+    this.y=y;
+  }
+  dog(obj){
+    return obj+""+this.x
+  }
+  cat(obj){
+     return obj+""+this.y
+  }
+}
+
+let a = new animal("a", "b");
+
+console.log(a.cat("2"));
+
+let d = {a: "2", "b": 3};
+console.log(Reflect.get(d,"a"));
+console.log(d.c)
+
+
+
+</script>
+</body>
+</html>
