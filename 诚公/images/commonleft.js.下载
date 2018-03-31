@@ -1,0 +1,13 @@
+﻿$(function(){
+	function panel(){
+		var page_all=$(".wrapper");
+		if(parseInt(page_all.css("right"))=="0"){
+			page_all.animate({"right":"14em"},400,"easeInBack");}
+		else{
+			page_all.animate({"right":"0"},400,"easeOutBack");}				
+	}
+	$("#btn-nav").click(function(){
+		panel();
+	})
+	
+})
