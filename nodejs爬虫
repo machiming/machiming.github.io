@@ -1,0 +1,56 @@
+var express = require('express');
+var router = express.Router();
+var request = require("request");
+var cheerio = require("cheerio");
+var fs = require("fs");
+var bugUrl = 'http://maoyan.com/board/4?offset=';
+router.get('/bug',async function (req, res, next) {
+    var data = [];
+    var count = 0;
+    var result = [];
+    var url = '';
+    function requestUrl(count){
+        url = bugUrl +  count;
+        request(url, function (error, response, body) {
+            if (!error && response.statusCode == 200) {
+                var $ = cheerio.load(body);
+                var navText = $('.board-wrapper dd');
+                if (navText.length > 0&&count<100) {
+                    Array.from(navText).forEach(function (value) {
+                        var img =$(value).find(".image-link img.board-img").attr("data-src")
+                        var title = $(value).find(".image-link img.board-img").attr("alt");
+                        var url = "http://maoyan.com"+$(value).find(".board-item-main .name a").attr("href");
+                        var rank = $(value).find(".board-index").text();
+                        data.push({rank,title,img, url});
+
+                    });
+                    setTimeout(function () {
+                        requestUrl(count + 10);
+                        console.log(count/10+"页")
+                    },500)
+                }else {
+                    writeJson(data);
+                }
+            }else {
+                res.json(error);
+            }
+        });
+    }
+    function writeJson(params){
+        //现将json文件读出来
+        fs.readFile('./data/data.json',function(err,data){
+            if(err){
+                return console.error(err);
+            }
+            var str = JSON.stringify(Object.assign(params,JSON.parse(data.toString()))).toString();
+           fs.writeFile('./data/data.json',str,function(err){
+                if(err){
+                    console.error(err);
+                }
+                console.log('----------新增成功-------------');
+            })
+        })
+    }
+    requestUrl(0)
+});
+module.exports = router;
