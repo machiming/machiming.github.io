@@ -1,9 +1,0 @@
-// JavaScript Document
-$(document).ready(function() {
-	
-	$('.subsearch').click(function(){
-		$('.subsearchbox').toggle();
-		$('.subnavbox').hide();
-	});
-
-});
