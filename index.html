@@ -1,40 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>Title2</title>
-  <link rel="stylesheet" href="find/index.css">
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
 </head>
 <body>
-<div id="bg" style=""></div>
-<div id="unbg">
-  <div ID="content">
-    <p class="title">Dream Afar</p>
-    <p class="subtitle">A new way to explore the world</p>
-    <div id="searchbox">
-      <input type="text" placeholder="search baidu" id="searchcontent">
-      <span id="search" onclick="search()"></span>
-    </div>
-  </div>
-  <div id="time"></div>
-</div>
-<script>
-  time.innerHTML = gettime();
-  function gettime(){
-    let date = new Date();
-    let hour = date.getHours();
-    let minutes = date.getMinutes();
-    let dt = (hour<10?"0"+hour:hour) + ":" + (minutes<10?"0"+minutes:minutes);
-    return dt
-  }
-
-  setInterval(function () {
-    time.innerHTML= gettime()
-  }, 10000);
-  function search() {
-     window.location.href="https://www.baidu.com/s?wd="+searchcontent.value
-  }
-
-</script>
+  我的主页
 </body>
 </html>
